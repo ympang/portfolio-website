@@ -7,6 +7,7 @@ import Layout from "../components/layouts/article"
 import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
 import { GridItem } from '../components/grid-item'
 import thumb from '../public/images/Alice.png'
+import Footer from "../components/footer"
 
 const Page = () => {
     return (
@@ -84,6 +85,7 @@ const Page = () => {
                         </GridItem>
                     </SimpleGrid>
                 </Section>
+                <Footer/>
             </Container>
         </Layout>
     )
