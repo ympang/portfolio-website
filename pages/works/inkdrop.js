@@ -8,7 +8,7 @@ import {
   } from '@chakra-ui/react'
   import { ExternalLinkIcon } from '@chakra-ui/icons'
   import { Title, WorkImage, Meta } from '../../components/work'
-  import Paragraph from '../../components/paragraph'
+  import { Paragraph } from '../../components/paragraph'
   import Layout from '../../components/layouts/article'
   
   const Work = () => (
