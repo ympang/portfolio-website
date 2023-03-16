@@ -1,4 +1,4 @@
-.vertical-timeline-element-icon {
+.vertical-timeline .vertical-timeline-element-icon {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -8,7 +8,7 @@
     box-shadow: 0 0 0 4px #fff, inset 0 2px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%);
 }
 
-.vertical-timeline-element-content p {
+.vertical-timeline .vertical-timeline-element-content p {
     margin: 0.5em 0 0;
     line-height: 1.6;
 }
