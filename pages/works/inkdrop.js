@@ -8,7 +8,7 @@ import {
   } from '@chakra-ui/react'
   import { ExternalLinkIcon } from '@chakra-ui/icons'
   import { Title, WorkImage, Meta } from '../../components/work'
-  import P from '../../components/paragraph'
+  import Paragraph from '../../components/paragraph'
   import Layout from '../../components/layouts/article'
   
   const Work = () => (
@@ -17,10 +17,10 @@ import {
         <Title>
           Inkdrop <Badge>2016-</Badge>
         </Title>
-        <P>
+        <Paragraph>
           A Markdown note-taking app with 100+ plugins, cross-platform and
           encrypted data sync support. The life-time revenue is more than $300k.
-        </P>
+        </Paragraph>
         <List ml={4} my={4}>
           <ListItem>
             <Meta>Website</Meta>

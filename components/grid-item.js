@@ -45,11 +45,31 @@ export const WorkGridItem = ({ children, id, title, thumbnail }) => (
     </Box>
 )
 
+
+export const SkillGridItem = ({ children, id, title, thumbnail }) => (
+    <Box w="100%" textAlign="center">
+        <Box
+        >
+            <Image
+                src={thumbnail}
+                alt={title}
+                className="grid-item-thumbnail"
+                placeholder="blur"
+            />
+            <Text as='b' mt={2} fontSize={20}>
+                {title}
+            </Text>
+            <Text fontSize={14}>{children}</Text>
+        </Box>
+    </Box>
+)
+
 export const GridItemStyle = () => (
     <Global
         styles={`
       .grid-item-thumbnail {
         border-radius: 12px;
+        margin: 0 auto;
       }
     `}
     />

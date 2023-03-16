@@ -1,6 +1,8 @@
-import { Container, Box, Heading, Image, useColorModeValue, SimpleGrid, List, ListItem, Button, Icon } from "@chakra-ui/react"
+import { Container, Box, Heading, Image, useColorModeValue, SimpleGrid, List, ListItem, Button, Icon, Tag,
+    TagLabel,
+    HStack } from "@chakra-ui/react"
 import Section from "../components/section"
-import Paragraph from "../components/paragraph"
+import { Paragraph } from "../components/paragraph"
 import { BioSection, BioYear, BioCompany, BioDetail } from "../components/bio"
 import Link from "next/link"
 import Layout from "../components/layouts/article"
@@ -8,11 +10,12 @@ import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
 import { GridItem } from '../components/grid-item'
 import thumb from '../public/images/Alice.png'
 import Footer from "../components/footer"
-import {
-    Tag,
-    TagLabel,
-    HStack
-} from '@chakra-ui/react'
+import { SkillGridItem } from '../components/grid-item'
+import backend from '../public/images/backend.png'
+import frontend from '../public/images/ui-design.png'
+import database from '../public/images/database-storage.png'
+import container from '../public/images/crane.png'
+import { TimeLine } from "../components/timeline"
 
 const Page = () => {
     return (
@@ -37,43 +40,45 @@ const Page = () => {
                     <Heading as="h3" variant="section-title">
                         Skills
                     </Heading>
-                    <Paragraph>Programming:</Paragraph>
-                    <Paragraph>Java (Spring Boot), Python, C# (.NET Framework), SQL(MySQL, Presto), NoSQL(Elastic Search)</Paragraph>
                 </Section>
+                <SimpleGrid columns={[1, 1, 2]} gap={6}>
+                    <Section delay={0.2}>
+                        <SkillGridItem id="margelo" thumbnail={backend} title="Backend">
+                            Java (Spring Boot), Python, C# (.NET Framework)
+                        </SkillGridItem>
+                    </Section>
+                    <Section delay={0.2}>
+                        <SkillGridItem
+                            id="modetokyo"
+                            thumbnail={frontend}
+                            title="Frontend"
+                        >
+                            Next.js (Semantic UI, Formik)
+                        </SkillGridItem>
+                    </Section>
+                    <Section delay={0.3}>
+                        <SkillGridItem id="database" thumbnail={database} title="Database">
+                            SQL(MySQL, Presto), NoSQL(Elastic Search)
+                        </SkillGridItem>
+                    </Section>
+                    <Section delay={0.3}>
+                        <SkillGridItem id="others" thumbnail={container} title="Others">
+                            AliCloud, Kubernetes, Docker, Git
+                        </SkillGridItem>
+                    </Section>
+                </SimpleGrid>
                 <Section delay={0.2}>
                     <Heading as="h3" variant="section-title">
-                        Experience
+                        Experience and Education
                     </Heading>
-                    <BioSection>
-                        <BioYear>Mar 2022 - Present</BioYear>
-                        <BioCompany>Engineer, South China Morning Post</BioCompany><br></br>
-                        Revamp Applications with Java Spring Boot, Next.js and MySQL<br></br>
-                        Develop Airflow Dags with Python to integrate data to data warehouse system<br></br>
-                        {/* <HStack spacing={4}>
-                            {['sm', 'md', 'lg'].map((size) => (
-                                <Tag size={size} key={size} variant='solid' colorScheme='teal'>
-                                    <BioDetail>Teal</BioDetail>
-                                </Tag>
-                            ))}
-                        </HStack> */}
-                        <Tag size='lg' variant='solid' colorScheme='teal'>
-                                    <BioDetail>Java Spring Boot</BioDetail>
-                                </Tag>
-                    </BioSection>
-                    <BioSection>
-                        <BioYear>Sep 2021 - Feb 2022</BioYear>
-                        <BioCompany>Senior Programmer, DBS Bank (Hong Kong) Limited</BioCompany><br></br>
-                        Assist the project team in programming with Angular and Java to work for internal pojects<br></br>
-                        Conduct UAT with users
-                    </BioSection>
-                    <BioSection>
-                        <BioYear>Sep 2020 - Sep 2021</BioYear>
-                        <BioCompany>Software Engineer I, Openrice Limited</BioCompany><br></br>
-                        Develop and maintain API using C#, MS SQL Server, MongoDB and Redis for internal and third-party application<br></br>
-                        Develop Telegram bot for internal use and iOS push notification program with Python<br></br>
-                        Work with RESY to build booking API integration<br></br>
-                        Work with support cases<br></br>
-                    </BioSection>
+                    <TimeLine/>
+                    {/* <HStack spacing={4}>
+                        {['sm', 'md', 'lg'].map((size) => (
+                            <Tag size={size} key={size} variant='solid' colorScheme='teal'>
+                                <BioDetail>Teal</BioDetail>
+                            </Tag>
+                        ))}
+                    </HStack> */}
                 </Section>
 
                 <Section delay={0.3}>
@@ -82,7 +87,7 @@ const Page = () => {
                     </Heading>
                     <Paragraph>
                         Gunpla,{' '}
-                        <Link href="https://500px.com/p/craftzdog" target="_blank">
+                        <Link href="" target="_blank">
                             Photography
                         </Link>
                     </Paragraph>

@@ -4,6 +4,7 @@ import { AnimatePresence } from 'framer-motion'
 // import Chakra from '../components/chakra'
 import { ChakraProvider } from '@chakra-ui/react'
 import theme from '../lib/theme'
+import '../styles/timeline.css'
 
 if (typeof window !== 'undefined') {
   window.history.scrollRestoration = 'manual'
