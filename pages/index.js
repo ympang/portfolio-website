@@ -1,6 +1,8 @@
-import { Container, Box, Heading, Image, useColorModeValue, SimpleGrid, List, ListItem, Button, Icon, Tag,
-    TagLabel,
-    HStack } from "@chakra-ui/react"
+import {
+    Container, Box, Heading, Image, useColorModeValue, SimpleGrid, List, ListItem, Button, Icon, Tag,
+    TagLabel,Center,
+    HStack
+} from "@chakra-ui/react"
 import Section from "../components/section"
 import { Paragraph } from "../components/paragraph"
 import { BioSection, BioYear, BioCompany, BioDetail } from "../components/bio"
@@ -36,6 +38,14 @@ const Page = () => {
                             borderColor="whiteAlpha.800" borderWidth={2} borderStyle="solid" maxWidth="100px" display="inline-block" borderRadius="full" />
                     </Box>
                 </Box>
+                <Center>
+                    <Button
+                        w={{ base: "50%", md: "30%" }} // set width for mobile and desktop
+                        colorScheme="teal"
+                    >
+                        Download my resume
+                    </Button>
+                </Center>
                 <Section delay={0.1}>
                     <Heading as="h3" variant="section-title">
                         Skills
@@ -71,7 +81,7 @@ const Page = () => {
                     <Heading as="h3" variant="section-title">
                         Experience and Education
                     </Heading>
-                    <TimeLine/>
+                    <TimeLine />
                     {/* <HStack spacing={4}>
                         {['sm', 'md', 'lg'].map((size) => (
                             <Tag size={size} key={size} variant='solid' colorScheme='teal'>
@@ -112,15 +122,6 @@ const Page = () => {
                             </Link>
                         </ListItem>
                     </List>
-                    <SimpleGrid columns={[1, 2, 2]} gap={6}>
-                        <GridItem
-                            href="https://google.com"
-                            title="CV"
-                            thumbnail={thumb}
-                        >
-                            Download my resume
-                        </GridItem>
-                    </SimpleGrid>
                 </Section>
                 <Footer />
             </Container>
