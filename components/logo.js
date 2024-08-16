@@ -22,7 +22,7 @@ const LogoBox = styled.span`
 
 const Logo = () => {
 
-    const footPrintImg = '/images/Alice.png';
+    const footPrintImg = '/images/laptop.png';
     // const footPrintImg = `/images/Alice${useColorModeValue('','-dark')}.png`
 
     return (
@@ -30,7 +30,7 @@ const Logo = () => {
 
             <LogoBox>
                 {/* <FootprintIcon /> */}
-                <Image src={footPrintImg} width={20} height={20} alt="logo"></Image>
+                <Image src={footPrintImg} width={25} height={25} alt="logo"></Image>
                 <Text
                     color={useColorModeValue('gray.800', 'whiteAlpha.900')}
                     fontFamily='M PLUS Rounded 1c", sans-serif'

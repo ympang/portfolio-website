@@ -57,7 +57,7 @@ const Page = () => {
             align="center"
           >
             <Image
-              src="/images/Alice.png"
+              src="/images/laptop.png"
               borderColor="whiteAlpha.800"
               borderWidth={2}
               borderStyle="solid"
